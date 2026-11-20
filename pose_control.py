@@ -98,6 +98,7 @@ def main():
                             )
 
                             if shoulder_angle is not None and elbow_angle is not None:
+                                elbow_angle = 180 - elbow_angle
                                 arduino.write(
                                     f"{shoulder_angle},{elbow_angle}\n".encode("ascii")
                                 )
